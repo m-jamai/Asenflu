@@ -137,4 +137,319 @@
       text-transform: uppercase;
       color: var(--muted);
       display: inline-flex;
-      align-items: center
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .section-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+
+    .catalog {
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: linear-gradient(135deg, #090b10 0, #050608 60%);
+    }
+
+    .track {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 4px;
+    }
+
+    .track-main {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .track-title { font-size: 0.95rem; }
+    .track-meta { font-size: 0.75rem; color: var(--muted); }
+
+    .track-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-end;
+    }
+
+    .track-link {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .track-link--primary {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .bottom {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 24px;
+    }
+
+    .card {
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 16px 14px 18px;
+      background: #050608;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .card-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    .contact-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #090b10;
+      color: var(--fg);
+    }
+
+    .btn-primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #050608;
+    }
+
+    .btn-icon {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid currentColor;
+    }
+
+    .social-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .social-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 6px 0;
+    }
+
+    .social-name { font-size: 0.85rem; }
+    .social-handle { font-size: 0.75rem; color: var(--muted); }
+    .social-link {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 26px;
+      font-size: 0.7rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 720px) {
+      .page { padding: 16px 14px 24px; }
+      header { padding-bottom: 8px; }
+      .nav { display: none; }
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .hero-cover { min-height: 220px; }
+      .hero-title { font-size: 1.4rem; }
+      .bottom { grid-template-columns: minmax(0, 1fr); }
+      .catalog { padding: 12px 10px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">ASENFLU</div>
+      <nav class="nav">
+        <a href="#latest">Latest</a>
+        <a href="#music">Music</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="latest" class="hero">
+        <div class="hero-cover">
+          <span>[COVER ART]</span>
+        </div>
+
+        <div class="hero-info">
+          <div class="hero-meta">Latest release · [mokadima]</div>
+          <div class="hero-title">[mokadima]</div>
+
+          <div class="hero-player">
+            <label>Play now</label>
+            <audio controls preload="none">
+              <source src="[mokadima]" type="audio/mpeg" />
+            </audio>
+          </div>
+
+          <div class="hero-actions">
+            <div class="pill">
+              <span class="pill-dot"></span>
+              <span>Spotify</span>
+            </div>
+            <div class="pill"><span>Apple Music</span></div>
+            <div class="pill"><span>Deezer</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="music">
+        <div class="section-title">All music</div>
+
+        <div class="catalog">
+          <div class="track">
+            <div class="track-main">
+              <div class="track-title">[mokadima]</div>
+              <div class="track-meta">Single · Year [mokadima]</div>
+            </div>
+
+            <div class="track-links">
+              <a class="track-link track-link--primary" href="[mokadima]" target="_blank">Spotify</a>
+              <a class="track-link" href="[mokadima]" target="_blank">Apple Music</a>
+              <a class="track-link" href="[mokadima]" target="_blank">YouTube</a>
+            </div>
+          </div>
+
+          <div class="track">
+            <div class="track-main">
+              <div class="track-title">[mokadima]</div>
+              <div class="track-meta">EP · Year [mokadima]</div>
+            </div>
+
+            <div class="track-links">
+              <a class="track-link track-link--primary" href="[mokadima]" target="_blank">Spotify</a>
+              <a class="track-link" href="[mokadima]" target="_blank">Apple Music</a>
+              <a class="track-link" href="[mokadima]" target="_blank">Deezer</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bottom">
+        <div class="card">
+          <div class="card-label">Contact</div>
+          <div class="contact-note">Collaborations, sessions, bookings.</div>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:[EMAIL]">
+              <span class="btn-icon"></span>
+              <span>Email</span>
+            </a>
+
+            <a class="btn" href="[mokadima]" target="_blank">
+              <span class="btn-icon"></span>
+              <span>Management</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Social</div>
+
+          <div class="social-list">
+            <div class="social-item">
+              <div>
+                <div class="social-name">Instagram</div>
+                <div class="social-handle">@[mokadima]</div>
+              </div>
+              <a class="social-link" href="[mokadima]" target="_blank">Open</a>
+            </div>
+
+            <div class="social-item">
+              <div>
+                <div class="social-name">TikTok</div>
+                <div class="social-handle">@[mokadima]</div>
+              </div>
+              <a class="social-link" href="[mokadima]" target="_blank">Open</a>
+            </div>
+
+            <div class="social-item">
+              <div>
+                <div class="social-name">YouTube</div>
+                <div class="social-handle">ASENFLU</div>
+              </div>
+              <a class="social-link" href="[mokadima]" target="_blank">Open</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>ASENFLU · writes · plays · produces</span>
+      <span>[mokadima]</span>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll("a[href^='#']").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const targetId = link.getAttribute("href").slice(1);
+        const target = document.getElementById(targetId);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  </script>
+</body>
+</html>
