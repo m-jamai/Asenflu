@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg:#0b0b0a; --paper:#f1eee7; --muted:#aaa69d; --line:rgba(241,238,231,.14);
+  --accent:#c96b4b; --sand:#d9c8a9; --card:#121211; --max:1440px;
+}
+[data-theme="light"]{--bg:#eeeae1;--paper:#11110f;--muted:#67645d;--line:rgba(17,17,15,.14);--card:#e5e0d6;--accent:#a74d32;--sand:#9a8663}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--paper);font-family:Inter,system-ui,sans-serif;transition:background .35s,color .35s}
+a{color:inherit;text-decoration:none} button,input,textarea{font:inherit}
+.site-header{position:fixed;z-index:50;top:0;left:0;right:0;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;border-bottom:1px solid transparent;transition:.3s}
+.site-header.scrolled{background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(16px);border-color:var(--line)}
+.logo{font-family:"Space Grotesk";font-weight:700;letter-spacing:-.06em;font-size:24px}
+.nav{display:flex;gap:24px;align-items:center}.nav a{font-size:12px;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);transition:.2s}.nav a:hover,.nav a.active{color:var(--paper)}
+.tools{display:flex;gap:8px;align-items:center}.tool{background:none;border:1px solid var(--line);color:var(--paper);padding:8px 10px;border-radius:999px;cursor:pointer;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.menu-btn{display:none}
+main{max-width:var(--max);margin:auto;padding:0 28px}
+.hero{min-height:100vh;display:grid;align-items:end;padding:150px 0 60px;position:relative;overflow:hidden}
+.hero-art{position:absolute;inset:0;z-index:-1;background:
+ radial-gradient(circle at 70% 35%,rgba(201,107,75,.32),transparent 28%),
+ linear-gradient(125deg,#111 0%,#15130f 45%,#34231b 100%);}
+.hero-art:after,.visual:after{content:"";position:absolute;inset:0;opacity:.14;background-image:radial-gradient(#fff .5px,transparent .5px);background-size:5px 5px;mix-blend-mode:screen}
+.kicker{font:11px "DM Mono";text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.hero h1{font:clamp(72px,14vw,210px);line-height:.78;margin:20px 0 30px;letter-spacing:-.085em;font-family:"Space Grotesk"}
+.hero-bottom{display:flex;justify-content:space-between;gap:30px;align-items:end}.hero-copy{max-width:480px;color:var(--muted);line-height:1.6}
+.cta{display:inline-flex;align-items:center;gap:12px;border:1px solid var(--paper);padding:13px 18px;border-radius:999px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;margin-top:22px}
+.cta:hover{background:var(--paper);color:var(--bg)}
+.section{padding:120px 0}.section-head{display:flex;justify-content:space-between;align-items:end;border-top:1px solid var(--line);padding-top:18px;margin-bottom:40px}.section-head h2{font:500 clamp(38px,6vw,78px)/.9 "Space Grotesk";letter-spacing:-.06em;margin:0}.section-head p{color:var(--muted);max-width:300px;font-size:13px;line-height:1.5}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.card{background:var(--card);border:1px solid var(--line);position:relative;overflow:hidden}
+.cover{aspect-ratio:1/1;background:linear-gradient(145deg,#26221c,#c96b4b);position:relative;overflow:hidden}.cover.alt{background:linear-gradient(135deg,#1a2431,#85745e)}.cover.indigo{background:linear-gradient(135deg,#15151d,#413e6b)}
+.cover span{position:absolute;left:18px;bottom:18px;font:11px "DM Mono";letter-spacing:.08em}.card-info{padding:18px}.card-info h3{margin:0 0 8px;font:500 24px "Space Grotesk";letter-spacing:-.04em}.meta{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em}
+.music-card{grid-column:span 4}.wide{grid-column:span 7}.narrow{grid-column:span 5}
+.visual{min-height:500px;background:linear-gradient(120deg,#1a1a17,#6e4438);position:relative;overflow:hidden}.visual .label{position:absolute;left:24px;top:24px;font:11px "DM Mono";z-index:2}
+.page-hero{padding:170px 0 80px}.page-hero h1{font:500 clamp(70px,12vw,170px)/.8 "Space Grotesk";letter-spacing:-.08em;margin:20px 0}.page-intro{max-width:620px;color:var(--muted);line-height:1.7}
+.release-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px}.tracklist{border-top:1px solid var(--line)}.track{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);font-size:13px}.track span:last-child{color:var(--muted)}
+.player{position:fixed;z-index:40;bottom:18px;left:50%;transform:translateX(-50%);width:min(520px,calc(100% - 32px));padding:10px 14px;background:color-mix(in srgb,var(--card) 94%,transparent);border:1px solid var(--line);backdrop-filter:blur(18px);display:flex;gap:12px;align-items:center;border-radius:14px}.play{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--paper);cursor:pointer}.player-copy{flex:1}.player-copy b{font-size:12px}.player-copy small{display:block;color:var(--muted);font-size:10px;margin-top:2px}.bar{height:2px;background:var(--line);position:relative;margin-top:7px}.bar i{display:block;width:38%;height:100%;background:var(--accent)}
+.object-card{grid-column:span 4}.object-card .cover{aspect-ratio:4/5}.object-card .cover:before{content:"";position:absolute;inset:18% 14%;border:1px solid rgba(255,255,255,.35);transform:rotate(-8deg)}.object-card .cover:after{content:"ASENFLU";position:absolute;inset:0;display:grid;place-items:center;font:700 28px "Space Grotesk";letter-spacing:-.08em;opacity:.7}
+.tour-row{display:grid;grid-template-columns:110px 1fr 180px auto;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);align-items:center}.tour-date,.tour-place{font:12px "DM Mono"}.tour-city{font:500 24px "Space Grotesk"}.tag{border:1px solid var(--line);padding:7px 10px;border-radius:999px;font-size:10px;text-transform:uppercase;letter-spacing:.1em}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px}.about-copy{font:500 clamp(28px,4vw,54px);line-height:1.05;letter-spacing:-.05em}.about-copy em{color:var(--accent);font-style:normal}.facts{border-top:1px solid var(--line)}.fact{padding:18px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px}.fact span:last-child{color:var(--muted)}
+.form{max-width:760px}.field{display:grid;gap:8px;margin-bottom:22px}.field label{font:10px "DM Mono";text-transform:uppercase;color:var(--muted)}.field input,.field textarea{background:none;border:0;border-bottom:1px solid var(--line);color:var(--paper);padding:12px 0;outline:none}.field textarea{min-height:130px;resize:vertical}.submit{background:var(--paper);color:var(--bg);border:0;border-radius:999px;padding:13px 20px;cursor:pointer;text-transform:uppercase;font-size:10px;letter-spacing:.1em}
+.footer{border-top:1px solid var(--line);padding:45px 28px 80px;display:flex;justify-content:space-between;gap:30px;max-width:var(--max);margin:auto}.footer small{color:var(--muted)}
+.zellige{height:34px;margin:0 0 25px;opacity:.35;background:linear-gradient(45deg,transparent 46%,var(--accent) 47%,var(--accent) 53%,transparent 54%) 0 0/17px 17px,linear-gradient(-45deg,transparent 46%,var(--accent) 47%,var(--accent) 53%,transparent 54%) 8px 8px/17px 17px}
+.reveal{opacity:0;transform:translateY(22px);transition:.8s}.reveal.visible{opacity:1;transform:none}
+.page-transition{position:fixed;z-index:100;inset:0;background:var(--paper);transform:scaleY(1);transform-origin:top;pointer-events:none;animation:out .7s forwards}.page-transition:after{content:"ASENFLU";position:absolute;inset:0;display:grid;place-items:center;color:var(--bg);font:700 38px "Space Grotesk";letter-spacing:-.07em}@keyframes out{to{transform:scaleY(0)}}
+@media(max-width:900px){.nav{display:none}.menu-btn{display:block}.site-header{padding:0 18px}.mobile-open .nav{position:absolute;display:flex;flex-direction:column;align-items:flex-start;top:76px;left:0;right:0;padding:25px 18px;background:var(--bg);border-bottom:1px solid var(--line)}main{padding:0 18px}.music-card,.object-card,.wide,.narrow{grid-column:span 12}.hero-bottom,.section-head{display:block}.section-head p{margin-top:20px}.release-layout,.about-grid{grid-template-columns:1fr}.tour-row{grid-template-columns:80px 1fr;gap:8px}.tour-row .tour-place,.tour-row .tag{grid-column:2}.footer{padding:35px 18px 100px;display:block}.footer nav{margin-top:25px}.hero{padding-bottom:100px}.player{bottom:10px}}

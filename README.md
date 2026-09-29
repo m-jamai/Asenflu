@@ -1,22 +1,36 @@
-# ASENFLU — Official Artist Website
+# ASENFLU — Multi-page artist website concept
 
-A responsive, dependency-light artist website prototype.
+Updated concept:
+- True multi-page structure, not a one-page site
+- Artist-first / editorial presentation
+- No prices
+- No cart
+- No checkout
+- No payment UI
+- No purchase CTAs
+- Objects page keeps the visual world of merch and physical music without commerce
+- Dedicated vinyl / physical release page
+- Music, release, tour, about, journal and contact pages
+- Sticky responsive navigation
+- Demo floating player
+- Dark/light mode
+- EN/FR toggle placeholder
+- Mobile navigation
+- Scroll reveal and page transition
+- Subtle zellige-inspired line pattern
+- Clearly marked placeholders for official imagery, copy, links and embeds
 
-## Run
-Open `index.html` directly in a browser, or serve the folder:
-- `python3 -m http.server 8000`
-- visit `http://localhost:8000`
+Files:
+index.html
+music.html
+release.html
+objects.html
+vinyl.html
+tour.html
+about.html
+journal.html
+contact.html
+styles.css
+script.js
 
-## Replace placeholders
-- Hero `.hero-media`: artist photo/video
-- Album `.cover` blocks: real cover artwork
-- Product `.product-img`: real product photos
-- Vinyl artwork / tracklist
-- Tour ticket URLs
-- Spotify / Apple Music / YouTube / Deezer / Anghami links
-- Booking / press emails
-- EPK, Terms, Privacy, Shipping & Returns
-- Newsletter provider and checkout/payment backend
-
-## Production notes
-The UI is intentionally self-contained and fast. For production commerce, connect the cart and checkout to a real backend/storefront provider, inventory, tax/shipping logic, payment processor, and order confirmation flow.
+Open index.html locally to preview.
